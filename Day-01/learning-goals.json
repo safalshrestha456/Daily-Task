@@ -1,0 +1,59 @@
+{
+  "internship": {
+    "role": "Full Stack Developer Intern",
+    "duration": "2 Months / 8 Weeks / 40 Working Days",
+    "developer": "Safal Shrestha",
+    "repository": "https://github.com/safalshrestha456/Daily-Task.git",
+    "finalProject": "Task Management System (React, Apollo Client, GraphQL, FastAPI, PostgreSQL, Docker)",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Web Foundation & Tailwind CSS",
+        "days": "01 - 05",
+        "technologies": ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Tailwind CSS"]
+      },
+      {
+        "phase": 2,
+        "name": "JavaScript Foundation",
+        "days": "06 - 10",
+        "technologies": ["ES6+", "DOM Manipulation", "Async/Await", "Fetch API", "JSON"]
+      },
+      {
+        "phase": 3,
+        "name": "React with Vite",
+        "days": "11 - 15",
+        "technologies": ["React", "Vite", "JSX", "useState", "Component Architecture"]
+      },
+      {
+        "phase": 4,
+        "name": "Advanced React & Frontend Mini Project",
+        "days": "16 - 20",
+        "technologies": ["React Router", "useEffect", "Context API", "React Testing Library"]
+      },
+      {
+        "phase": 5,
+        "name": "Python + FastAPI + GraphQL Backend Basics",
+        "days": "21 - 25",
+        "technologies": ["Python OOP", "FastAPI", "Uvicorn", "GraphQL Schema & Resolvers"]
+      },
+      {
+        "phase": 6,
+        "name": "Database + Authentication + GraphQL Security",
+        "days": "26 - 30",
+        "technologies": ["PostgreSQL", "SQLAlchemy ORM", "Alembic", "JWT Authentication", "Bcrypt"]
+      },
+      {
+        "phase": 7,
+        "name": "Apollo Client + Full Stack Integration + DevOps",
+        "days": "31 - 35",
+        "technologies": ["Apollo Client", "ApolloProvider", "useQuery", "useMutation", "Docker", "Linux"]
+      },
+      {
+        "phase": 8,
+        "name": "Docker + Deployment + Final Project",
+        "days": "36 - 40",
+        "technologies": ["Docker Compose", "Vercel", "Render", "Postman", "CI/CD"]
+      }
+    ]
+  }
+}
