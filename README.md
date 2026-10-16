@@ -24,7 +24,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 - [x] **Day 02:** HTML structure, semantic tags, forms, tables, links and images (Personal Portfolio)
 - [x] **Day 03:** CSS selectors, box model, typography, display, positioning (Styled Portfolio)
 - [x] **Day 04:** Flexbox, Grid, responsive layout, media queries (Responsive Software Company Homepage)
-- [ ] **Day 05:** Tailwind CSS setup, utility classes, responsive design, cards, forms (Login & Registration)
+- [x] **Day 05:** Tailwind CSS setup, utility classes, responsive design, cards, forms (Login & Registration)
 
 ### Week 2: JavaScript Foundation
 - [ ] **Day 06:** Variables, data types, operators, conditions, loops, functions (Grade calculator, even/odd, simple interest)
