@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevPulse Technologies - Modern Enterprise Cloud, GraphQL, and Full Stack Software Solutions">
+  <meta name="author" content="Safal Shrestha">
+  <title>DevPulse Technologies | Full Stack Cloud & GraphQL Software Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Flexbox) -->
+  <aside class="announcement-bar">
+    <div class="container announcement-content">
+      <span>🚀 <strong>New Release:</strong> DevPulse 3.0 with native GraphQL Federation & Docker orchestration is live!</span>
+      <a href="#services" class="announcement-link">Explore Features &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Navigation Header (Flexbox Layout) -->
+  <header class="navbar-wrapper">
+    <div class="container navbar">
+      <div class="nav-brand">
+        <svg class="brand-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#2563EB"/>
+          <path d="M7 16L13 22L25 10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-title">DevPulse<span class="accent-text">Tech</span></span>
+      </div>
+
+      <!-- Mobile Hamburger Checkbox Hack for pure CSS responsiveness -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#services" class="menu-link">Services</a>
+        <a href="#solutions" class="menu-link">Solutions</a>
+        <a href="#features" class="menu-link">Features</a>
+        <a href="#pricing" class="menu-link">Pricing</a>
+        <a href="#testimonials" class="menu-link">Testimonials</a>
+        <div class="nav-action-btns">
+          <a href="#pricing" class="btn btn-outline">Client Login</a>
+          <a href="#contact" class="btn btn-primary">Schedule Demo</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (Flexbox 2-Column Responsive Layout) -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-text-col">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span> Next-Generation Enterprise Software
+          </div>
+          <h1 class="hero-headline">
+            Accelerate Your Digital Products with <span class="gradient-text">Cloud & GraphQL</span> Engineering
+          </h1>
+          <p class="hero-lead">
+            DevPulse crafts enterprise-grade web applications, reactive GraphQL APIs, and scalable PostgreSQL database architectures containerized with Docker for modern high-growth companies.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary btn-lg">Start 14-Day Free Trial</a>
+            <a href="#services" class="btn btn-secondary btn-lg">View Technical Capabilities</a>
+          </div>
+          <div class="hero-trust">
+            <span class="trust-label">TRUSTED BY INNOVATIVE ENGINEERING TEAMS:</span>
+            <div class="trust-logos">
+              <span class="trust-pill">CloudScale</span>
+              <span class="trust-pill">DataFlow</span>
+              <span class="trust-pill">NextGen APIs</span>
+              <span class="trust-pill">TaskFlow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="mockup-title">devpulse-system-monitor.graphql</span>
+            </div>
+            <div class="mockup-body">
+              <pre class="code-block"><code><span class="code-keyword">query</span> <span class="code-func">GetClusterStatus</span> {
+  cluster(region: <span class="code-str">"us-east-1"</span>) {
+    status: <span class="code-val">ONLINE</span>
+    uptime: <span class="code-str">"99.99%"</span>
+    activeContainers: <span class="code-val">128</span>
+    databaseConnections: <span class="code-val">48</span>
+    fastapiThroughput: <span class="code-str">"12.4k req/s"</span>
+    latencyP99: <span class="code-str">"18ms"</span>
+  }
+}</code></pre>
+              <div class="mockup-stats-bar">
+                <div class="mini-stat">
+                  <span class="mini-label">HEALTH</span>
+                  <span class="mini-val text-green">100% HEALTHY</span>
+                </div>
+                <div class="mini-stat">
+                  <span class="mini-label">ACTIVE PODS</span>
+                  <span class="mini-val">42 DOCKER NODES</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Bar (Flexbox Evenly Distributed) -->
+    <section class="metrics-section">
+      <div class="container metrics-grid">
+        <div class="metric-card">
+          <span class="metric-number">99.99%</span>
+          <span class="metric-desc">Cloud Uptime SLA Guaranteed</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">10M+</span>
+          <span class="metric-desc">GraphQL Operations Processed Daily</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">&lt; 20ms</span>
+          <span class="metric-desc">Average Backend Response Latency</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">500+</span>
+          <span class="metric-desc">Enterprise Applications Deployed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Services Section (CSS Grid Layout) -->
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag">ENGINEERING SERVICES</span>
+          <h2 class="section-title">Built for Modern High-Throughput Workloads</h2>
+          <p class="section-subtitle">Comprehensive full-stack services engineered from database schema design to frontend state orchestration.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3 class="service-title">FastAPI & High-Performance Backends</h3>
+            <p class="service-text">
+              Asynchronous Python microservices leveraging Uvicorn, ASGI concurrency, Pydantic validation schemas, and automated OpenAPI documentation.
+            </p>
+            <ul class="service-checklist">
+              <li>Async request pipeline</li>
+              <li>Type-safe Pydantic models</li>
+              <li>JWT & OAuth2 token security</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🌐</div>
+            <h3 class="service-title">GraphQL APIs & Federation</h3>
+            <p class="service-text">
+              Eliminate over-fetching and under-fetching with strongly-typed GraphQL schemas, optimized resolvers, and Apollo Client client-side integration.
+            </p>
+            <ul class="service-checklist">
+              <li>Queries, Mutations & Subscriptions</li>
+              <li>Apollo caching & normalization</li>
+              <li>Custom directives & resolvers</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⚛️</div>
+            <h3 class="service-title">Modern React & Vite Frontends</h3>
+            <p class="service-text">
+              Lightning-fast single page applications built with React 19, Vite HMR, Tailwind CSS utilities, protected routes, and contextual state management.
+            </p>
+            <ul class="service-checklist">
+              <li>Vite sub-millisecond bundling</li>
+              <li>Responsive mobile-first interfaces</li>
+              <li>Custom hooks & Context state</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🗄️</div>
+            <h3 class="service-title">PostgreSQL & SQLAlchemy ORM</h3>
+            <p class="service-text">
+              ACID-compliant relational database modeling, connection pooling, indexed queries, foreign key relationships, and automated Alembic migrations.
+            </p>
+            <ul class="service-checklist">
+              <li>Robust database normal forms</li>
+              <li>Alembic version-controlled migrations</li>
+              <li>SQLAlchemy session lifecycle</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🐳</div>
+            <h3 class="service-title">Docker & Containerization</h3>
+            <p class="service-text">
+              Multi-stage Dockerfiles and Docker Compose architectures isolating frontend, backend API, and PostgreSQL database with persistent volume management.
+            </p>
+            <ul class="service-checklist">
+              <li>Lightweight Alpine base images</li>
+              <li>Docker Compose multi-service networks</li>
+              <li>Production environment parity</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">DevOps & Cloud Deployment</h3>
+            <p class="service-text">
+              Automated continuous integration and deployment pipelines targeting Render, Vercel, Netlify, and AWS with SSL and reverse-proxy load balancing.
+            </p>
+            <ul class="service-checklist">
+              <li>Zero-downtime deployment</li>
+              <li>Continuous testing & linting</li>
+              <li>Environment secrets management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Asymmetric Grid Showcase -->
+    <section id="solutions" class="section solutions-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">ARCHITECTURAL EXCELLENCE</span>
+          <h2 class="section-title">Engineered According to Industry Standards</h2>
+          <p class="section-subtitle">Our 3-tier separation of concerns guarantees reliability, maintainability, and horizontal scalability.</p>
+        </div>
+
+        <div class="solutions-grid">
+          <div class="solution-card col-span-2">
+            <div class="solution-content">
+              <span class="solution-pill">Full Stack Architecture</span>
+              <h3>Unified Client-to-Database Workflow</h3>
+              <p>
+                From the moment an end-user triggers a mutation in React using Apollo Client, data travels through secure JWT HTTP headers to our FastAPI server, validates via Pydantic, and commits atomically into PostgreSQL through SQLAlchemy ORM sessions.
+              </p>
+              <div class="solution-tags">
+                <span>React</span> &bull; <span>Apollo</span> &bull; <span>FastAPI</span> &bull; <span>SQLAlchemy</span> &bull; <span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-content">
+              <span class="solution-pill">Containerized</span>
+              <h3>Docker Compose Ready</h3>
+              <p>Spin up complete development and production environments with a single command: <code>docker compose up --build</code>.</p>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-content">
+              <span class="solution-pill">Security</span>
+              <h3>Zero-Trust Authentication</h3>
+              <p>Bcrypt salted password hashing, stateless short-lived JWT access tokens, and role-based endpoint authorization.</p>
+            </div>
+          </div>
+
+          <div class="solution-card col-span-2">
+            <div class="solution-content">
+              <span class="solution-pill">Developer Experience</span>
+              <h3>Automated Documentation & GraphQL Playground</h3>
+              <p>Interactive API exploration via Swagger UI (`/docs`), ReDoc (`/redoc`), and Apollo GraphQL Playground for instant schema introspection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section (Responsive CSS Grid) -->
+    <section id="pricing" class="section pricing-section">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag">TRANSPARENT PLANS</span>
+          <h2 class="section-title">Flexible Engineering & Support Tiers</h2>
+          <p class="section-subtitle">Choose the right software engineering capacity for your company size.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3 class="plan-name">Startup Tier</h3>
+              <p class="plan-desc">For early-stage MVPs and rapid product validation.</p>
+              <div class="plan-price"><span class="currency">$</span>499<span class="period">/mo</span></div>
+            </div>
+            <ul class="plan-features">
+              <li>FastAPI REST Backend</li>
+              <li>React + Vite Responsive Frontend</li>
+              <li>PostgreSQL Single Database Node</li>
+              <li>Docker Containerization</li>
+              <li>Standard Community Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block">Select Startup Plan</a>
+          </div>
+
+          <div class="pricing-card pricing-featured">
+            <div class="featured-ribbon">MOST POPULAR</div>
+            <div class="plan-header">
+              <h3 class="plan-name">Professional Growth</h3>
+              <p class="plan-desc">For scaling businesses requiring high availability & GraphQL APIs.</p>
+              <div class="plan-price"><span class="currency">$</span>1,299<span class="period">/mo</span></div>
+            </div>
+            <ul class="plan-features">
+              <li>FastAPI + GraphQL Apollo Federation</li>
+              <li>React + Tailwind CSS Design System</li>
+              <li>PostgreSQL with Connection Pooling & Read Replicas</li>
+              <li>Docker Compose + Automated CI/CD</li>
+              <li>JWT Authentication & Role-Based Access</li>
+              <li>24/7 Dedicated Support & SLA</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block">Get Started with Pro</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3 class="plan-name">Enterprise Custom</h3>
+              <p class="plan-desc">For high-throughput organizations with custom compliance needs.</p>
+              <div class="plan-price"><span class="currency">$</span>2,999<span class="period">/mo</span></div>
+            </div>
+            <ul class="plan-features">
+              <li>Custom Microservices Architecture</li>
+              <li>Dedicated DevOps & Kubernetes Clustered Setup</li>
+              <li>Enterprise Security Audit & Penetration Testing</li>
+              <li>Custom Database Sharding & Migrations</li>
+              <li>Dedicated Solution Architect</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block">Contact Enterprise Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section (Flexbox Cards) -->
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag">TESTIMONIALS</span>
+          <h2 class="section-title">What Engineering Leaders Say</h2>
+        </div>
+
+        <div class="testimonials-flex">
+          <div class="testimonial-card">
+            <p class="quote-text">
+              "DevPulse redesigned our backend architecture using FastAPI and GraphQL. Our query times dropped by 70% and frontend bundle size shrunk significantly."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AM</div>
+              <div class="author-info">
+                <strong>Aarav Mishra</strong>
+                <span>CTO, CloudScale Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="quote-text">
+              "The Docker containerization and clean separation of concerns allowed our team to onboard new developers in minutes instead of days. Truly impressive work."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SP</div>
+              <div class="author-info">
+                <strong>Sunita Pandey</strong>
+                <span>Lead Architect, DataFlow Nepal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Consultation Form (Flexbox Row Layout) -->
+    <section id="contact" class="section cta-section">
+      <div class="container cta-container">
+        <div class="cta-content">
+          <h2 class="cta-title">Ready to Transform Your Web Infrastructure?</h2>
+          <p class="cta-desc">
+            Schedule a technical consultation with our engineering team or request a customized software architecture proposal.
+          </p>
+          <ul class="cta-perks">
+            <li>✓ Free 30-minute system architecture review</li>
+            <li>✓ Tailored full-stack roadmap & technology selection</li>
+            <li>✓ Transparent pricing & guaranteed delivery</li>
+          </ul>
+        </div>
+
+        <form class="cta-form" action="#" method="POST">
+          <h3 class="form-title">Request Technical Proposal</h3>
+          <div class="form-group">
+            <label for="client-name">Full Name</label>
+            <input type="text" id="client-name" name="name" required placeholder="Safal Shrestha">
+          </div>
+          <div class="form-group">
+            <label for="client-email">Business Email</label>
+            <input type="email" id="client-email" name="email" required placeholder="safal@devpulse.io">
+          </div>
+          <div class="form-group">
+            <label for="project-scope">Service Interest</label>
+            <select id="project-scope" name="service">
+              <option value="fullstack">Full Stack System (React + FastAPI + GraphQL)</option>
+              <option value="graphql">GraphQL API Modernization</option>
+              <option value="devops">Docker & DevOps Cloud Migration</option>
+              <option value="frontend">React & Tailwind Frontend Redesign</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Submit Consultation Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Multi-Column Footer (CSS Grid) -->
+  <footer class="footer-wrapper">
+    <div class="container footer-grid">
+      <div class="footer-col col-main">
+        <div class="nav-brand">
+          <span class="brand-title">DevPulse<span class="accent-text">Tech</span></span>
+        </div>
+        <p class="footer-bio">
+          Enterprise software development company delivering robust React frontends, high-concurrency FastAPI microservices, and GraphQL APIs.
+        </p>
+        <p class="footer-author">
+          Created for <strong>Day 04: Flexbox, Grid & Responsive Layouts</strong><br>
+          Author: <strong>Safal Shrestha</strong> (Full Stack Intern)
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">FastAPI Backends</a></li>
+          <li><a href="#services">GraphQL Federation</a></li>
+          <li><a href="#services">React Single Page Apps</a></li>
+          <li><a href="#services">PostgreSQL Data Modeling</a></li>
+          <li><a href="#services">Docker Containerization</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Curriculum Links</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/safalshrestha456/Daily-Task" target="_blank">Daily-Task Repository</a></li>
+          <li><a href="https://github.com/safalshrestha456/Full-Stack-internship" target="_blank">Full-Stack Capstone Repo</a></li>
+          <li><a href="https://github.com/safalshrestha456" target="_blank">GitHub Profile</a></li>
+          <li><a href="#pricing">Pricing Plans</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Office & Contact</h4>
+        <p class="contact-line">📍 Tinkune, Kathmandu, Nepal</p>
+        <p class="contact-line">📧 <a href="mailto:shresthasafal12345@gmail.com">shresthasafal12345@gmail.com</a></p>
+        <p class="contact-line">⏱ 7h 5m Daily Learning & Work</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-flex">
+        <p>&copy; 2026 DevPulse Technologies. All rights reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
