@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Safal Shrestha - Full Stack Developer Intern Styled Portfolio (Day 3 CSS Box Model, Typography, Selectors, Positioning)">
+  <meta name="author" content="Safal Shrestha">
+  <title>Safal Shrestha | Styled Portfolio (Day 03)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header class="header sticky-top">
+    <div class="nav-container">
+      <div class="brand">
+        <span class="brand-avatar">S</span>
+        <div class="brand-text">
+          <span class="brand-name">Safal Shrestha</span>
+          <span class="brand-tag">Full Stack Intern</span>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#schedule" class="nav-link">Internship Plan</a>
+        <a href="#contact" class="nav-link btn-nav">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="container main-layout">
+    <main class="content-area">
+
+      <!-- Hero / About Section -->
+      <section id="about" class="section hero-card">
+        <div class="hero-header">
+          <div class="profile-frame">
+            <svg class="profile-avatar" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="48" fill="#2563EB"/>
+              <circle cx="50" cy="38" r="18" fill="#FFFFFF"/>
+              <path d="M22 82C22 66.536 34.536 54 50 54C65.464 54 78 66.536 78 82" fill="#FFFFFF"/>
+            </svg>
+            <span class="status-indicator" title="Actively Learning & Coding"></span>
+          </div>
+          <div class="hero-details">
+            <span class="badge badge-accent">Day 03: CSS Mastery</span>
+            <h1 class="hero-title">Safal Shrestha</h1>
+            <p class="hero-subtitle">Full Stack Developer Intern specializing in React, FastAPI, GraphQL & Docker</p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View Featured Work</a>
+              <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-narrative">
+          <p>
+            I am a software engineering intern dedicated to modern web development. Over this intensive 2-month training program, I focus on building robust, high-performance web systems using <strong>React</strong> on the frontend and <strong>FastAPI with GraphQL & PostgreSQL</strong> on the backend.
+          </p>
+          <div class="info-badges">
+            <span class="info-pill">📍 Kathmandu, Nepal</span>
+            <span class="info-pill">⏱ 40-Day Internship</span>
+            <span class="info-pill">🎯 50 Marks Practical Target</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Skills Section -->
+      <section id="skills" class="section">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Technical Skills & Stacks</h2>
+          <p class="section-desc">Categorized competencies practiced daily throughout the curriculum.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon frontend-icon">🎨</div>
+            <h3 class="skill-category">Frontend Engineering</h3>
+            <ul class="skill-list">
+              <li><span class="skill-tag">HTML5 Semantic</span></li>
+              <li><span class="skill-tag">CSS3 (Box Model / Flex / Grid)</span></li>
+              <li><span class="skill-tag">Tailwind CSS</span></li>
+              <li><span class="skill-tag">JavaScript (ES6+)</span></li>
+              <li><span class="skill-tag">React.js & Vite</span></li>
+              <li><span class="skill-tag">Apollo Client</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon backend-icon">⚡</div>
+            <h3 class="skill-category">Backend & GraphQL</h3>
+            <ul class="skill-list">
+              <li><span class="skill-tag">Python OOP</span></li>
+              <li><span class="skill-tag">FastAPI & Uvicorn</span></li>
+              <li><span class="skill-tag">Pydantic Models</span></li>
+              <li><span class="skill-tag">GraphQL Resolvers</span></li>
+              <li><span class="skill-tag">JWT Authentication</span></li>
+              <li><span class="skill-tag">Bcrypt Hashing</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon db-icon">🗄️</div>
+            <h3 class="skill-category">Database & DevOps</h3>
+            <ul class="skill-list">
+              <li><span class="skill-tag">PostgreSQL</span></li>
+              <li><span class="skill-tag">SQLAlchemy ORM</span></li>
+              <li><span class="skill-tag">Alembic Migrations</span></li>
+              <li><span class="skill-tag">Docker & Compose</span></li>
+              <li><span class="skill-tag">Git & GitHub Flow</span></li>
+              <li><span class="skill-tag">Linux Commands</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Internship Projects</h2>
+          <p class="section-desc">Key milestones developed and maintained during the internship.</p>
+        </div>
+
+        <div class="projects-list">
+          <article class="project-card">
+            <div class="project-badge">Capstone Project</div>
+            <h3 class="project-title">Full Stack Task Management System</h3>
+            <p class="project-desc">
+              Production-ready web platform supporting task creation, status workflows, user authentication, role-based access, and GraphQL operations backed by PostgreSQL.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Apollo Client</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/safalshrestha456/Full-Stack-internship" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub Repository &rarr;</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge progress-badge">Active Repository</div>
+            <h3 class="project-title">Daily Task Progress Tracker (40-Day Series)</h3>
+            <p class="project-desc">
+              Structured progressive repository tracking daily theory notes, homework assignments, and production code pushes covering frontend, backend, databases, and containerization.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">Tailwind</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">React</span>
+              <span class="tag">FastAPI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/safalshrestha456/Daily-Task" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub Daily-Task &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Schedule Table Section -->
+      <section id="schedule" class="section">
+        <div class="section-title-wrap">
+          <h2 class="section-title">8-Week Internship Schedule</h2>
+          <p class="section-desc">Structured 40-day roadmap leading to the 50-mark final assessment.</p>
+        </div>
+
+        <div class="table-container">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Week</th>
+                <th>Days</th>
+                <th>Core Track</th>
+                <th>Key Technologies</th>
+                <th>Deliverable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="pill-week">Week 1</span></td>
+                <td>01 – 05</td>
+                <td><strong>Web Foundation & Tailwind</strong></td>
+                <td>HTML5, CSS Box Model, Flex/Grid, Tailwind CSS</td>
+                <td>Portfolio & Software Landing Page</td>
+              </tr>
+              <tr>
+                <td><span class="pill-week">Week 2</span></td>
+                <td>06 – 10</td>
+                <td><strong>JavaScript Foundation</strong></td>
+                <td>ES6+, DOM, Promises, Async/Await, Fetch API</td>
+                <td>Vanilla JS Todo App & API User Listing</td>
+              </tr>
+              <tr>
+                <td><span class="pill-week">Week 3</span></td>
+                <td>11 – 15</td>
+                <td><strong>React with Vite</strong></td>
+                <td>JSX, Functional Components, useState, Forms</td>
+                <td>Interactive React Todo & Member Cards</td>
+              </tr>
+              <tr>
+                <td><span class="pill-week">Week 4</span></td>
+                <td>16 – 20</td>
+                <td><strong>Advanced React & Mini Project</strong></td>
+                <td>React Router, useEffect, Context API, Testing</td>
+                <td>Task Management Frontend Prototype</td>
+              </tr>
+              <tr>
+                <td><span class="pill-week">Week 5</span></td>
+                <td>21 – 25</td>
+                <td><strong>Python + FastAPI + GraphQL</strong></td>
+                <td>Python OOP, FastAPI, Pydantic, GraphQL Schemas</td>
+                <td>Product & Task REST / GraphQL APIs</td>
+              </tr>
+              <tr>
+                <td><span class="pill-week">Week 6</span></td>
+                <td>26 – 30</td>
+                <td><strong>Database + Auth + Security</strong></td>
+                <td>PostgreSQL, SQLAlchemy, JWT, Password Hash</td>
+                <td>Secure Task CRUD with PostgreSQL</td>
+              </tr>
+              <tr>
+                <td><span class="pill-week">Week 7</span></td>
+                <td>31 – 35</td>
+                <td><strong>Apollo Client + Integration</strong></td>
+                <td>Apollo Client, useQuery, useMutation, Dockerfile</td>
+                <td>Connected Full Stack App & Docker image</td>
+              </tr>
+              <tr>
+                <td><span class="pill-week">Week 8</span></td>
+                <td>36 – 40</td>
+                <td><strong>Docker + Deployment & Demo</strong></td>
+                <td>Docker Compose, Cloud Deployment, Postman</td>
+                <td>Live Deployed App & 50 Marks Viva</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2"><strong>Assessment Goal:</strong></td>
+                <td colspan="3"><strong>50 Marks: MCQ, Short Questions, Case Study & Practical Task</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section id="contact" class="section">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Send a Message / Mentorship Review</h2>
+          <p class="section-desc">Submit feedback, code reviews, or inquiries directly below.</p>
+        </div>
+
+        <form class="styled-form" action="#" method="POST">
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Your Details</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name <span class="required">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" required placeholder="Safal Shrestha">
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address <span class="required">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" required placeholder="safal@example.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Subject / Purpose</label>
+              <select id="contact-subject" name="subject" class="form-select">
+                <option value="review">Tutor Daily Task Code Review</option>
+                <option value="guidance">Curriculum & Technical Guidance</option>
+                <option value="collaboration">Project Collaboration Inquiry</option>
+                <option value="general">General Message</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message Content <span class="required">*</span></label>
+              <textarea id="contact-message" name="message" class="form-textarea" rows="4" required placeholder="Provide your review comments, suggestions or questions..."></textarea>
+            </div>
+            <div class="form-buttons">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="reset" class="btn btn-secondary">Reset Fields</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- Sidebar Aside -->
+    <aside class="sidebar-aside">
+      <div class="card sidebar-card sticky-sidebar">
+        <h3 class="sidebar-title">Daily Office Routine</h3>
+        <p class="sidebar-meta"><strong>Time:</strong> 7h 5m Daily Learning</p>
+        <ol class="routine-steps">
+          <li><strong>30 min:</strong> Review & plan blockers</li>
+          <li><strong>2 hours:</strong> Theory & code walkthrough</li>
+          <li><strong>2 hours:</strong> Practical implementation</li>
+          <li><strong>1 hour:</strong> Assignment building</li>
+          <li><strong>1 hour:</strong> Code review, git push & docs</li>
+        </ol>
+        <hr class="sidebar-divider">
+        <div class="quick-links">
+          <h4 class="quick-title">Quick Links</h4>
+          <a href="https://github.com/safalshrestha456/Daily-Task" class="aside-link" target="_blank">&rarr; Daily-Task Repo</a>
+          <a href="https://github.com/safalshrestha456/Full-Stack-internship" class="aside-link" target="_blank">&rarr; Full-Stack Project</a>
+          <a href="mailto:shresthasafal12345@gmail.com" class="aside-link">&rarr; Tutor Contact</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Safal Shrestha. Full Stack Developer Intern. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#about">Top</a>
+        <a href="https://github.com/safalshrestha456" target="_blank">GitHub</a>
+        <a href="mailto:shresthasafal12345@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed Back-to-Top Floating Button -->
+  <a href="#about" class="fixed-floating-btn" aria-label="Back to top" title="Scroll to top">&uarr;</a>
+
+</body>
+</html>
