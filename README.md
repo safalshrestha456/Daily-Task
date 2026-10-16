@@ -21,7 +21,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 
 ### Week 1: Web Foundation & Tailwind CSS
 - [x] **Day 01:** Full stack overview, frontend vs backend, HTTP, JSON, REST vs GraphQL, Git setup & learning goals
-- [ ] **Day 02:** HTML structure, semantic tags, forms, tables, links and images (Personal Portfolio)
+- [x] **Day 02:** HTML structure, semantic tags, forms, tables, links and images (Personal Portfolio)
 - [ ] **Day 03:** CSS selectors, box model, typography, display, positioning (Styled Portfolio)
 - [ ] **Day 04:** Flexbox, Grid, responsive layout, media queries (Responsive Software Company Homepage)
 - [ ] **Day 05:** Tailwind CSS setup, utility classes, responsive design, cards, forms (Login & Registration)
