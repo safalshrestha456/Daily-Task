@@ -27,7 +27,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 - [x] **Day 05:** Tailwind CSS setup, utility classes, responsive design, cards, forms (Login & Registration)
 
 ### Week 2: JavaScript Foundation
-- [ ] **Day 06:** Variables, data types, operators, conditions, loops, functions (Grade calculator, even/odd, simple interest)
+- [x] **Day 06:** Variables, data types, operators, conditions, loops, functions (Grade calculator, even/odd, simple interest)
 - [ ] **Day 07:** Arrays, objects, map, filter, find, reduce (Student result analyzer)
 - [ ] **Day 08:** DOM manipulation, events, creating elements (Vanilla JavaScript Todo App)
 - [ ] **Day 09:** Form handling, regex validation, error display (Registration form with validation)

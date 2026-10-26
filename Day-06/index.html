@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Day 06 JavaScript Foundation - Grade Calculator, Even/Odd Checker and Simple Interest Calculator">
+  <meta name="author" content="Safal Shrestha">
+  <title>Day 06 | JavaScript Foundation Calculators</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">JS</span>
+        <div>
+          <h1>JavaScript Core Calculators</h1>
+          <p>Day 06: Variables, Data Types, Operators, Conditions, Loops & Functions</p>
+        </div>
+      </div>
+      <div class="meta-tag">
+        <span>Safal Shrestha &bull; Full Stack Intern</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="tabs-nav">
+    <div class="tab-list">
+      <button class="tab-btn active" onclick="switchTab('grade')">📊 Grade Calculator</button>
+      <button class="tab-btn" onclick="switchTab('even-odd')">🔢 Even / Odd Checker</button>
+      <button class="tab-btn" onclick="switchTab('interest')">💰 Simple Interest</button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- 1. GRADE CALCULATOR TAB -->
+    <section id="tab-grade" class="tab-panel active">
+      <div class="panel-header">
+        <h2>Student Academic Grade Calculator</h2>
+        <p>Calculates total marks, percentage, GPA (4.0 scale), letter grade and division based on individual subject inputs.</p>
+      </div>
+
+      <div class="calculator-grid">
+        <div class="input-card">
+          <h3>Enter Subject Marks (Out of 100)</h3>
+          <form id="grade-form" onsubmit="handleGradeCalculation(event)">
+            <div class="subject-row">
+              <label for="sub1">Frontend Development (React/Vite)</label>
+              <input type="number" id="sub1" min="0" max="100" value="88" required>
+            </div>
+            <div class="subject-row">
+              <label for="sub2">Backend APIs (FastAPI/Python)</label>
+              <input type="number" id="sub2" min="0" max="100" value="92" required>
+            </div>
+            <div class="subject-row">
+              <label for="sub3">API Architecture (GraphQL)</label>
+              <input type="number" id="sub3" min="0" max="100" value="85" required>
+            </div>
+            <div class="subject-row">
+              <label for="sub4">Database Management (PostgreSQL)</label>
+              <input type="number" id="sub4" min="0" max="100" value="78" required>
+            </div>
+            <div class="subject-row">
+              <label for="sub5">DevOps & Containerization (Docker)</label>
+              <input type="number" id="sub5" min="0" max="100" value="84" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate Result & GPA</button>
+          </form>
+        </div>
+
+        <div class="result-card" id="grade-result-card">
+          <h3>Evaluation Summary</h3>
+          <div class="grade-badge" id="display-grade">A</div>
+          <div class="result-stats">
+            <div class="stat-item">
+              <span class="stat-label">Total Marks</span>
+              <span class="stat-value" id="display-total">427 / 500</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Percentage</span>
+              <span class="stat-value" id="display-percentage">85.4%</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">GPA</span>
+              <span class="stat-value" id="display-gpa">3.6 / 4.0</span>
+            </div>
+          </div>
+          <div class="status-box" id="display-status">
+            Status: Passed - First Division
+          </div>
+          <p class="remark-text" id="display-remark">Excellent academic performance across all modules.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. EVEN / ODD CHECKER TAB -->
+    <section id="tab-even-odd" class="tab-panel">
+      <div class="panel-header">
+        <h2>Even / Odd Number & Range Analyzer</h2>
+        <p>Demonstrates modulo operators <code>%</code>, strict equality <code>===</code>, and range loop analysis with <code>while</code> and <code>for</code> loops.</p>
+      </div>
+
+      <div class="calculator-grid">
+        <!-- Single Check Card -->
+        <div class="input-card">
+          <h3>Single Number Checker</h3>
+          <div class="input-group">
+            <label for="single-num">Enter any integer:</label>
+            <input type="number" id="single-num" value="42" placeholder="e.g. 27">
+            <button class="btn btn-primary mt-2" onclick="handleSingleEvenOdd()">Check Number</button>
+          </div>
+          <div class="single-output" id="single-output-box">
+            The number <strong>42</strong> is <span class="badge-even">Even</span>
+          </div>
+        </div>
+
+        <!-- Range Check Card -->
+        <div class="input-card">
+          <h3>Range Loop Analyzer</h3>
+          <div class="range-inputs">
+            <div>
+              <label for="range-start">Start Number:</label>
+              <input type="number" id="range-start" value="1">
+            </div>
+            <div>
+              <label for="range-end">End Number:</label>
+              <input type="number" id="range-end" value="20">
+            </div>
+          </div>
+          <button class="btn btn-primary mt-2" onclick="handleRangeAnalysis()">Analyze Range</button>
+          
+          <div class="range-output" id="range-output-box">
+            <div class="result-stats">
+              <div class="stat-item">
+                <span class="stat-label">Total Numbers</span>
+                <span class="stat-value" id="range-total-count">20</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Even Count</span>
+                <span class="stat-value text-green" id="range-even-count">10</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Odd Count</span>
+                <span class="stat-value text-orange" id="range-odd-count">10</span>
+              </div>
+            </div>
+            <div class="lists-breakdown">
+              <p><strong>Even Numbers:</strong> <span id="even-list-span">2, 4, 6, 8, 10, 12, 14, 16, 18, 20</span> (Sum: <span id="even-sum-span">110</span>)</p>
+              <p><strong>Odd Numbers:</strong> <span id="odd-list-span">1, 3, 5, 7, 9, 11, 13, 15, 17, 19</span> (Sum: <span id="odd-sum-span">100</span>)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SIMPLE INTEREST CALCULATOR TAB -->
+    <section id="tab-interest" class="tab-panel">
+      <div class="panel-header">
+        <h2>Simple Interest & Growth Calculator</h2>
+        <p>Formula: <code>I = (P &times; T &times; R) / 100</code> &bull; Generates a year-by-year amortization breakdown using loops.</p>
+      </div>
+
+      <div class="calculator-grid">
+        <div class="input-card">
+          <h3>Investment / Loan Parameters</h3>
+          <form id="si-form" onsubmit="handleSICalculation(event)">
+            <div class="form-group">
+              <label for="si-p">Principal Amount (P) in NPR / $:</label>
+              <input type="number" id="si-p" min="100" step="100" value="100000" required>
+            </div>
+            <div class="form-group">
+              <label for="si-r">Annual Interest Rate (R in %):</label>
+              <input type="number" id="si-r" min="0.1" max="100" step="0.1" value="9.5" required>
+            </div>
+            <div class="form-group">
+              <label for="si-t">Time Period (T in Years):</label>
+              <input type="number" id="si-t" min="1" max="30" step="1" value="5" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate Interest Schedule</button>
+          </form>
+        </div>
+
+        <div class="result-card">
+          <h3>Calculation Result</h3>
+          <div class="result-stats">
+            <div class="stat-item">
+              <span class="stat-label">Simple Interest Earned</span>
+              <span class="stat-value text-green" id="si-interest-display">NPR 47,500.00</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Total Maturity Balance</span>
+              <span class="stat-value" id="si-total-display">NPR 147,500.00</span>
+            </div>
+          </div>
+
+          <h4 class="mt-4 mb-2">Yearly Amortization Schedule:</h4>
+          <div class="table-wrap">
+            <table class="data-table" id="si-schedule-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Interest (Year)</th>
+                  <th>Accumulated Interest</th>
+                  <th>Balance</th>
+                </tr>
+              </thead>
+              <tbody id="si-schedule-tbody">
+                <!-- Dynamically populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2026 Safal Shrestha &bull; Full Stack Developer Intern &bull; Day 06 JavaScript Foundation</p>
+  </footer>
+
+  <script src="calculators.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
