@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Day 07: Student Result Analyzer using Arrays, Objects, Map, Filter, Find, and Reduce">
+  <meta name="author" content="Safal Shrestha">
+  <title>Day 07 | Student Result Analyzer (JS Arrays & Objects)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">AN</span>
+        <div>
+          <h1>Student Result Analyzer</h1>
+          <p>Day 07: JavaScript Arrays, Objects, Map, Filter, Find, and Reduce</p>
+        </div>
+      </div>
+      <div class="meta-tag">
+        <span>Safal Shrestha &bull; Full Stack Intern</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- KPI Metric Cards (Aggregated via Array.reduce) -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <span class="metric-label">Enrolled Students</span>
+        <span class="metric-value" id="kpi-total">8</span>
+        <span class="metric-sub">Active Batch 2026-Q1</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">Class Average Score</span>
+        <span class="metric-value text-blue" id="kpi-average">71.85%</span>
+        <span class="metric-sub">Aggregate percentage</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">Pass Percentage</span>
+        <span class="metric-value text-green" id="kpi-pass-rate">75.0%</span>
+        <span class="metric-sub" id="kpi-pass-count">6 Passed / 2 Failed</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">Top Performer</span>
+        <span class="metric-value text-gold" id="kpi-top-student">Sneha Joshi</span>
+        <span class="metric-sub" id="kpi-top-score">92.40% (A+)</span>
+      </div>
+    </section>
+
+    <!-- Toolbar: Filter Pills, Search Bar, and Add Student Trigger -->
+    <section class="toolbar-section">
+      <div class="filter-group">
+        <button class="filter-btn active" onclick="applyFilter('all')">All Students (<span id="count-all">8</span>)</button>
+        <button class="filter-btn" onclick="applyFilter('distinction')">Distinction &ge;80% (<span id="count-dist">3</span>)</button>
+        <button class="filter-btn" onclick="applyFilter('passed')">Passed &ge;40% (<span id="count-pass">6</span>)</button>
+        <button class="filter-btn" onclick="applyFilter('failed')">Needs Support (<span id="count-fail">2</span>)</button>
+      </div>
+
+      <div class="actions-group">
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Search by name or ID..." oninput="handleSearch(this.value)">
+        </div>
+        <button class="btn btn-primary" onclick="toggleAddModal(true)">+ Add Student</button>
+      </div>
+    </section>
+
+    <!-- Main Results Table (Rendered via Array.map) -->
+    <section class="table-card">
+      <div class="table-header">
+        <h2>Batch Performance Ledger</h2>
+        <span class="method-tag">Rendered with <code>Array.map()</code> & filtered with <code>Array.filter()</code></span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Student ID</th>
+              <th>Student Name</th>
+              <th>Attendance</th>
+              <th>React</th>
+              <th>FastAPI</th>
+              <th>GraphQL</th>
+              <th>Postgres</th>
+              <th>Docker</th>
+              <th>Total</th>
+              <th>Percentage</th>
+              <th>GPA</th>
+              <th>Grade</th>
+              <th>Division</th>
+            </tr>
+          </thead>
+          <tbody id="student-table-body">
+            <!-- Dynamically injected rows -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Subject Performance Breakdown Cards (Aggregated via Array.reduce) -->
+    <section class="subjects-section">
+      <div class="section-title-wrap">
+        <h2>Subject-Wise Class Performance</h2>
+        <p>Computed dynamically across all records using <code>Array.reduce()</code></p>
+      </div>
+
+      <div class="subjects-grid" id="subjects-container">
+        <!-- Injected via app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Add Student Modal -->
+  <div class="modal-overlay" id="add-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Add New Student Record</h3>
+        <button class="close-btn" onclick="toggleAddModal(false)">&times;</button>
+      </div>
+      <form id="add-student-form" onsubmit="handleAddNewStudent(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="new-id">Student ID:</label>
+            <input type="text" id="new-id" required placeholder="STU-109">
+          </div>
+          <div class="form-group">
+            <label for="new-name">Student Full Name:</label>
+            <input type="text" id="new-name" required placeholder="Nirajan Shrestha">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="new-attendance">Attendance (%):</label>
+          <input type="number" id="new-attendance" min="0" max="100" value="90" required>
+        </div>
+
+        <h4 class="mt-2 mb-1">Subject Marks (0 - 100):</h4>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="m-react">React Frontend:</label>
+            <input type="number" id="m-react" min="0" max="100" value="85" required>
+          </div>
+          <div class="form-group">
+            <label for="m-fastapi">FastAPI Backend:</label>
+            <input type="number" id="m-fastapi" min="0" max="100" value="88" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="m-graphql">GraphQL API:</label>
+            <input type="number" id="m-graphql" min="0" max="100" value="80" required>
+          </div>
+          <div class="form-group">
+            <label for="m-postgres">PostgreSQL DB:</label>
+            <input type="number" id="m-postgres" min="0" max="100" value="79" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="m-docker">Docker & DevOps:</label>
+          <input type="number" id="m-docker" min="0" max="100" value="82" required>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" onclick="toggleAddModal(false)">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save & Analyze</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="app-footer">
+    <p>&copy; 2026 Safal Shrestha &bull; Full Stack Developer Intern &bull; Day 07 JavaScript Arrays & Objects</p>
+  </footer>
+
+  <script src="analyzer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
