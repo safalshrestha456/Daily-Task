@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Day 08: Vanilla JavaScript Todo App demonstrating DOM manipulation, events, and dynamic elements">
+  <meta name="author" content="Safal Shrestha">
+  <title>Day 08 | Vanilla JavaScript Todo Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">DOM</span>
+        <div>
+          <h1>TaskFlow Todo App</h1>
+          <p>Day 08: DOM Manipulation, Event Listeners & Dynamic Elements</p>
+        </div>
+      </div>
+      <div class="meta-tag">
+        <span>Safal Shrestha &bull; Full Stack Intern</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    <div class="todo-card">
+
+      <!-- Form for adding new task (Form submit event) -->
+      <form id="todo-form" class="todo-form">
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="todo-input" 
+            placeholder="What needs to be done today? (e.g. Study React hooks...)" 
+            autocomplete="off"
+            required
+          >
+          <select id="todo-priority" class="priority-select" title="Set task priority">
+            <option value="low">Low Priority</option>
+            <option value="medium" selected>Medium Priority</option>
+            <option value="high">High Priority</option>
+          </select>
+        </div>
+        <button type="submit" id="add-btn" class="btn btn-primary">
+          <span class="btn-icon">+</span> Add Task
+        </button>
+      </form>
+
+      <!-- Status & Filter Toolbar -->
+      <div class="toolbar">
+        <div class="filter-tabs" id="filter-group">
+          <button class="filter-btn active" data-filter="all">All (<span id="count-all">0</span>)</button>
+          <button class="filter-btn" data-filter="active">Active (<span id="count-active">0</span>)</button>
+          <button class="filter-btn" data-filter="completed">Completed (<span id="count-completed">0</span>)</button>
+        </div>
+        <button id="clear-completed-btn" class="btn-text" title="Clear all completed tasks">
+          Clear Completed
+        </button>
+      </div>
+
+      <!-- Task List Container (Dynamic DOM Elements created here) -->
+      <ul id="todo-list" class="todo-list" aria-live="polite">
+        <!-- Dynamically injected via JavaScript -->
+      </ul>
+
+      <!-- Empty State View (Shown when 0 tasks exist) -->
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">📝</div>
+        <h3>No tasks found</h3>
+        <p>Your task list is empty. Add a new task above to get started!</p>
+      </div>
+
+      <!-- Todo Footer Stats -->
+      <footer class="todo-footer">
+        <span id="items-left">0 items remaining</span>
+        <span class="storage-indicator">💾 LocalStorage Synced</span>
+      </footer>
+
+    </div>
+
+    <!-- Educational Concept Callout Card -->
+    <section class="concept-card">
+      <h3>💡 DOM Concepts Used in This Project:</h3>
+      <div class="concept-grid">
+        <div class="concept-item">
+          <strong>1. Element Selection:</strong>
+          <code>document.getElementById()</code>, <code>document.querySelector()</code>
+        </div>
+        <div class="concept-item">
+          <strong>2. Dynamic Element Creation:</strong>
+          <code>document.createElement('li')</code>, <code>element.classList.add()</code>
+        </div>
+        <div class="concept-item">
+          <strong>3. Event Listeners:</strong>
+          <code>submit</code>, <code>click</code>, <code>change</code>, <code>keydown</code>
+        </div>
+        <div class="concept-item">
+          <strong>4. Event Delegation:</strong>
+          Handling delete, edit, and toggle clicks through a single parent <code>&lt;ul&gt;</code> listener.
+        </div>
+        <div class="concept-item">
+          <strong>5. State & Persistence:</strong>
+          Storing an array of task objects in browser <code>localStorage</code> with <code>JSON.stringify()</code>.
+        </div>
+        <div class="concept-item">
+          <strong>6. DOM Tree Mutation:</strong>
+          <code>element.append()</code>, <code>element.remove()</code>, <code>innerHTML = ''</code>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2026 Safal Shrestha &bull; Full Stack Developer Intern &bull; Day 08 Vanilla JS Todo App</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
