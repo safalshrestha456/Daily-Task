@@ -34,7 +34,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 - [x] **Day 10:** Fetch API, promises, async/await, JSON, GET and POST (API-based user listing page)
 
 ### Week 3: React with Vite
-- [ ] **Day 11:** React introduction, Vite setup, project structure, JSX (React portfolio homepage)
+- [x] **Day 11:** React introduction, Vite setup, project structure, JSX (React portfolio homepage)
 - [ ] **Day 12:** Functional components, reusable components, props (Team member cards)
 - [ ] **Day 13:** useState, event handling, conditional rendering (Product quantity counter)
 - [ ] **Day 14:** Controlled forms, form state, validation (React registration form)
