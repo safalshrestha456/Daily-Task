@@ -31,7 +31,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 - [x] **Day 07:** Arrays, objects, map, filter, find, reduce (Student result analyzer)
 - [x] **Day 08:** DOM manipulation, events, creating elements (Vanilla JavaScript Todo App)
 - [x] **Day 09:** Form handling, regex validation, error display (Registration form with validation)
-- [ ] **Day 10:** Fetch API, promises, async/await, JSON, GET and POST (API-based user listing page)
+- [x] **Day 10:** Fetch API, promises, async/await, JSON, GET and POST (API-based user listing page)
 
 ### Week 3: React with Vite
 - [ ] **Day 11:** React introduction, Vite setup, project structure, JSX (React portfolio homepage)

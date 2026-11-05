@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Day 10: API-Based User Listing Page with Fetch API, Async/Await, Promises, GET and POST">
+  <meta name="author" content="Safal Shrestha">
+  <title>Day 10 | API-Based User Listing (Fetch API & Async/Await)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">ASYNC</span>
+        <div>
+          <h1>API User Directory</h1>
+          <p>Day 10: Fetch API, Promises, Async/Await, JSON, GET & POST</p>
+        </div>
+      </div>
+      <div class="meta-tag">
+        <span>Safal Shrestha &bull; Full Stack Intern</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Controls Bar: Search, Stats, Reload & Add Button -->
+    <section class="controls-card">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search by name, email, or company...">
+      </div>
+
+      <div class="actions-wrap">
+        <button id="refresh-btn" class="btn btn-secondary">
+          <span class="btn-icon">🔄</span> Reload API
+        </button>
+        <button id="open-modal-btn" class="btn btn-primary">
+          <span class="btn-icon">+</span> New User (POST)
+        </button>
+      </div>
+    </section>
+
+    <!-- Network Status Alert -->
+    <div id="status-banner" class="status-banner">
+      <span id="status-text">Fetching data from <code>https://jsonplaceholder.typicode.com/users</code>...</span>
+    </div>
+
+    <!-- User Cards Grid -->
+    <section class="users-section">
+      <!-- Loading Skeleton Indicator -->
+      <div id="loading-spinner" class="loading-wrap">
+        <div class="spinner"></div>
+        <p>Loading users asynchronously...</p>
+      </div>
+
+      <!-- Injected User Cards Grid -->
+      <div id="users-grid" class="users-grid">
+        <!-- Rendered via app.js -->
+      </div>
+
+      <!-- Empty State View -->
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">👥</div>
+        <h3>No Users Found</h3>
+        <p>No user records matched your search query.</p>
+      </div>
+    </section>
+
+    <!-- Concepts Reference Card -->
+    <section class="concept-card">
+      <h3>💡 Asynchronous JavaScript Concepts Implemented:</h3>
+      <div class="concept-grid">
+        <div class="concept-item">
+          <strong>1. Fetch API & HTTP GET:</strong>
+          <code>fetch('https://...')</code> returns a Promise that resolves to a <code>Response</code> object.
+        </div>
+        <div class="concept-item">
+          <strong>2. Async / Await Syntax:</strong>
+          Simplifies promise resolution with clean, synchronous-looking code inside <code>async</code> functions.
+        </div>
+        <div class="concept-item">
+          <strong>3. HTTP POST Requests:</strong>
+          Sends <code>method: 'POST'</code> with headers <code>Content-Type: application/json</code> and serialized payload.
+        </div>
+        <div class="concept-item">
+          <strong>4. Error Handling with Try/Catch:</strong>
+          Safely catches network rejections and non-2xx status codes with user-friendly fallbacks.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Add User Modal (POST) -->
+  <div id="user-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Create New User (HTTP POST)</h3>
+        <button id="close-modal-btn" class="close-btn">&times;</button>
+      </div>
+      <form id="create-user-form">
+        <div class="form-group">
+          <label for="new-name">Full Name <span class="required">*</span></label>
+          <input type="text" id="new-name" required placeholder="e.g. Nirajan Shrestha">
+        </div>
+        <div class="form-group">
+          <label for="new-email">Email Address <span class="required">*</span></label>
+          <input type="email" id="new-email" required placeholder="e.g. nirajan@example.com">
+        </div>
+        <div class="form-group">
+          <label for="new-phone">Phone Number</label>
+          <input type="tel" id="new-phone" placeholder="e.g. +977-9812345678">
+        </div>
+        <div class="form-group">
+          <label for="new-company">Company Name</label>
+          <input type="text" id="new-company" placeholder="e.g. DevPulse Cloud Labs">
+        </div>
+        <div class="form-group">
+          <label for="new-city">City / Location</label>
+          <input type="text" id="new-city" placeholder="e.g. Kathmandu">
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" id="cancel-modal-btn" class="btn btn-secondary">Cancel</button>
+          <button type="submit" id="submit-post-btn" class="btn btn-primary">
+            <span>Send POST Request</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="app-footer">
+    <p>&copy; 2026 Safal Shrestha &bull; Full Stack Developer Intern &bull; Day 10 Fetch API & Async/Await</p>
+  </footer>
+
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
