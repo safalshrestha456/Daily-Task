@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Day 09: JavaScript Form Handling, Regex Validation & Real-Time Error Display">
+  <meta name="author" content="Safal Shrestha">
+  <title>Day 09 | Registration Form with Regex Validation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">REGEX</span>
+        <div>
+          <h1>Intern Registration Portal</h1>
+          <p>Day 09: Form Handling, Regex Validation & Dynamic Error Display</p>
+        </div>
+      </div>
+      <div class="meta-tag">
+        <span>Safal Shrestha &bull; Full Stack Intern</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    <div class="form-layout">
+
+      <!-- Left: Form Card -->
+      <section class="form-card">
+        <div class="card-header">
+          <h2>Create Intern Account</h2>
+          <p>All fields are validated in real-time using regular expressions and DOM events.</p>
+        </div>
+
+        <form id="registration-form" novalidate>
+          
+          <!-- Full Name -->
+          <div class="form-group" id="group-fullName">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <div class="input-icon-wrap">
+              <input type="text" id="fullName" name="fullName" placeholder="e.g. Safal Shrestha" autocomplete="name">
+              <span class="status-icon"></span>
+            </div>
+            <small class="error-msg"></small>
+            <span class="hint-text">3-50 alphabetic characters</span>
+          </div>
+
+          <!-- Username & Email (2 columns) -->
+          <div class="form-row">
+            <div class="form-group" id="group-username">
+              <label for="username">Username <span class="required">*</span></label>
+              <div class="input-icon-wrap">
+                <input type="text" id="username" name="username" placeholder="e.g. safal_dev" autocomplete="username">
+                <span class="status-icon"></span>
+              </div>
+              <small class="error-msg"></small>
+            </div>
+
+            <div class="form-group" id="group-email">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <div class="input-icon-wrap">
+                <input type="email" id="email" name="email" placeholder="e.g. safal@example.com" autocomplete="email">
+                <span class="status-icon"></span>
+              </div>
+              <small class="error-msg"></small>
+            </div>
+          </div>
+
+          <!-- Phone Number & Internship Track (2 columns) -->
+          <div class="form-row">
+            <div class="form-group" id="group-phone">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <div class="input-icon-wrap">
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +977-9841234567" autocomplete="tel">
+                <span class="status-icon"></span>
+              </div>
+              <small class="error-msg"></small>
+            </div>
+
+            <div class="form-group" id="group-track">
+              <label for="track">Internship Track <span class="required">*</span></label>
+              <div class="input-icon-wrap">
+                <select id="track" name="track">
+                  <option value="" disabled selected>-- Select Your Track --</option>
+                  <option value="Full Stack (React + FastAPI + GraphQL)">Full Stack (React + FastAPI + GraphQL)</option>
+                  <option value="Frontend Specialist (React + Tailwind)">Frontend Specialist (React + Tailwind)</option>
+                  <option value="Backend Specialist (Python + GraphQL + DB)">Backend Specialist (Python + GraphQL + DB)</option>
+                  <option value="DevOps & Docker Specialist">DevOps & Docker Specialist</option>
+                </select>
+                <span class="status-icon"></span>
+              </div>
+              <small class="error-msg"></small>
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group" id="group-password">
+            <div class="label-row">
+              <label for="password">Password <span class="required">*</span></label>
+              <button type="button" class="toggle-password-btn" data-target="password">Show</button>
+            </div>
+            <div class="input-icon-wrap">
+              <input type="password" id="password" name="password" placeholder="At least 8 chars with symbols & numbers" autocomplete="new-password">
+              <span class="status-icon"></span>
+            </div>
+            <small class="error-msg"></small>
+
+            <!-- Password Strength Meter -->
+            <div class="password-meter-wrap">
+              <div class="meter-bar">
+                <div class="meter-fill" id="strength-meter-fill"></div>
+              </div>
+              <div class="meter-meta">
+                <span>Strength: <strong id="strength-label">None</strong></span>
+                <span class="rule-checklist" id="rule-checklist">
+                  <span id="chk-len">&bull; 8+ chars</span>
+                  <span id="chk-upper">&bull; Uppercase</span>
+                  <span id="chk-lower">&bull; Lowercase</span>
+                  <span id="chk-num">&bull; Number</span>
+                  <span id="chk-spec">&bull; Special char</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group" id="group-confirmPassword">
+            <div class="label-row">
+              <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+              <button type="button" class="toggle-password-btn" data-target="confirmPassword">Show</button>
+            </div>
+            <div class="input-icon-wrap">
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-type your password" autocomplete="new-password">
+              <span class="status-icon"></span>
+            </div>
+            <small class="error-msg"></small>
+          </div>
+
+          <!-- Gender Radio Buttons -->
+          <div class="form-group" id="group-gender">
+            <span class="field-heading">Gender <span class="required">*</span></span>
+            <div class="radio-row">
+              <label class="radio-label">
+                <input type="radio" name="gender" value="Male"> Male
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="Female"> Female
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="Non-Binary/Other"> Other
+              </label>
+            </div>
+            <small class="error-msg"></small>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div class="form-group checkbox-group" id="group-terms">
+            <label class="checkbox-label">
+              <input type="checkbox" id="terms" name="terms">
+              <span>I agree to the <a href="#">Internship Code of Conduct</a> and Academic Integrity Policy.</span>
+            </label>
+            <small class="error-msg"></small>
+          </div>
+
+          <!-- Form Buttons -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              <span>Register Account</span> &rarr;
+            </button>
+            <button type="reset" class="btn btn-secondary" id="reset-btn">Reset Form</button>
+          </div>
+
+        </form>
+      </section>
+
+      <!-- Right: Live Submission / Inspection Output -->
+      <aside class="sidebar-col">
+        <div class="info-card" id="output-card">
+          <h3>Validated Output Preview</h3>
+          <p class="info-desc">Submitting the form with 100% valid fields will display the serialized JSON payload below:</p>
+          
+          <div class="json-preview-wrap">
+            <pre id="json-output"><code>// Form not submitted yet.
+// Fill the fields on the left to see live validation in action!</code></pre>
+          </div>
+
+          <div class="stats-badge-grid">
+            <div class="stat-pill">
+              <span class="stat-num" id="valid-fields-count">0 / 8</span>
+              <span class="stat-txt">Fields Valid</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num" id="form-status-pill">Pending</span>
+              <span class="stat-txt">Form Status</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card regex-cheatsheet-card">
+          <h3>🔍 Regex Patterns Applied:</h3>
+          <ul class="regex-list">
+            <li><strong>Email:</strong> <code>/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/</code></li>
+            <li><strong>Full Name:</strong> <code>/^[a-zA-Z\s]{3,50}$/</code></li>
+            <li><strong>Username:</strong> <code>/^[a-zA-Z][a-zA-Z0-9_]{2,19}$/</code></li>
+            <li><strong>Phone:</strong> <code>/^(?:\+977)?(?:98|97)\d{8}$/</code></li>
+            <li><strong>Password:</strong> Upper + Lower + Number + Special (&ge; 8)</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2026 Safal Shrestha &bull; Full Stack Developer Intern &bull; Day 09 Regex Form Validation</p>
+  </footer>
+
+  <script src="validation.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
