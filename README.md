@@ -35,7 +35,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 
 ### Week 3: React with Vite
 - [x] **Day 11:** React introduction, Vite setup, project structure, JSX (React portfolio homepage)
-- [ ] **Day 12:** Functional components, reusable components, props (Team member cards)
+- [x] **Day 12:** Functional components, reusable components, props (Team member cards)
 - [ ] **Day 13:** useState, event handling, conditional rendering (Product quantity counter)
 - [ ] **Day 14:** Controlled forms, form state, validation (React registration form)
 - [ ] **Day 15:** Lists, key prop, empty states, filters (React Todo App)
