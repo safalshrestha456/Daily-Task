@@ -1,0 +1,156 @@
+/* Page Layout Styles */
+.app-header {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1.25rem 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-badge {
+  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.brand-text h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.brand-text p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.meta-pill {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  color: #93C5FD;
+}
+
+.main-content {
+  padding: 3rem 0;
+  flex: 1;
+}
+
+.form-layout-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 860px) {
+  .form-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sidebar Live Inspector Card */
+.sidebar-inspector {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-inspector h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.inspector-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.state-preview-box {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  overflow: auto;
+  max-height: 380px;
+}
+
+.state-preview-box pre {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #34D399;
+  line-height: 1.5;
+}
+
+/* Form Guide Card */
+.form-guide-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.form-guide-card h3 {
+  color: #60A5FA;
+  margin-bottom: 1.25rem;
+  font-size: 1.2rem;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.guide-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  font-size: 0.85rem;
+}
+
+.guide-box strong {
+  display: block;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.guide-box code {
+  color: #F472B6;
+  font-family: var(--font-mono);
+  background-color: rgba(244, 114, 182, 0.1);
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1.75rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background-color: #07090E;
+}

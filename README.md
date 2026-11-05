@@ -37,7 +37,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 - [x] **Day 11:** React introduction, Vite setup, project structure, JSX (React portfolio homepage)
 - [x] **Day 12:** Functional components, reusable components, props (Team member cards)
 - [x] **Day 13:** useState, event handling, conditional rendering (Product quantity counter)
-- [ ] **Day 14:** Controlled forms, form state, validation (React registration form)
+- [x] **Day 14:** Controlled forms, form state, validation (React registration form)
 - [ ] **Day 15:** Lists, key prop, empty states, filters (React Todo App)
 
 ### Week 4: Advanced React & Frontend Mini Project

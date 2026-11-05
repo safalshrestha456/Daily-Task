@@ -1,0 +1,48 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary: #0A0D14;
+  --bg-surface: #111726;
+  --bg-card: #161F33;
+  --bg-card-hover: #1C2842;
+  --bg-input: #060910;
+  --border-subtle: #243049;
+  --border-focus: #3B82F6;
+  --border-error: #EF4444;
+  --border-success: #10B981;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --primary: #3B82F6;
+  --primary-hover: #2563EB;
+  --emerald: #10B981;
+  --orange: #F59E0B;
+  --red: #EF4444;
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
