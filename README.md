@@ -41,7 +41,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 - [x] **Day 15:** Lists, key prop, empty states, filters (React Todo App)
 
 ### Week 4: Advanced React & Frontend Mini Project
-- [ ] **Day 16:** React Router, pages, route params, navigation, protected routes (Multi-page app)
+- [x] **Day 16:** React Router, pages, route params, navigation, protected routes (Multi-page app)
 - [ ] **Day 17:** useEffect, useContext, custom hooks, API call pattern (User dashboard with API)
 - [ ] **Day 18:** Context API, auth state, prop drilling, state management basics (Login state via Context)
 - [ ] **Day 19:** Frontend testing basics, React Testing Library (Button, login, todo tests)
