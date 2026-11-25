@@ -45,7 +45,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 - [x] **Day 17:** useEffect, useContext, custom hooks, API call pattern (User dashboard with API)
 - [x] **Day 18:** Context API, auth state, prop drilling, state management basics (Login state via Context)
 - [x] **Day 19:** Frontend testing basics, React Testing Library (Button, login, todo tests)
-- [ ] **Day 20:** Frontend mini project review and presentation (Task Management frontend)
+- [x] **Day 20:** Frontend mini project review and presentation (Task Management frontend)
 
 ### Week 5: Python + FastAPI + GraphQL Backend Basics
 - [ ] **Day 21:** Python revision: variables, lists, dicts, loops, functions (Calculator & games)
