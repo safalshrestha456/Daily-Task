@@ -44,7 +44,7 @@ Welcome to my daily progress repository for the **2-Month Full Stack Developer I
 - [x] **Day 16:** React Router, pages, route params, navigation, protected routes (Multi-page app)
 - [x] **Day 17:** useEffect, useContext, custom hooks, API call pattern (User dashboard with API)
 - [x] **Day 18:** Context API, auth state, prop drilling, state management basics (Login state via Context)
-- [ ] **Day 19:** Frontend testing basics, React Testing Library (Button, login, todo tests)
+- [x] **Day 19:** Frontend testing basics, React Testing Library (Button, login, todo tests)
 - [ ] **Day 20:** Frontend mini project review and presentation (Task Management frontend)
 
 ### Week 5: Python + FastAPI + GraphQL Backend Basics
